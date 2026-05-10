@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minecraft Визитка | Мини-игра</title>
+  <meta name="description" content="Мини-игра кликер по руде: добывай ресурс киркой и улучшай инструмент.">
+  <link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="game" class="game-page">
+  <div class="container site-wrap">
+    <header class="site-header">
+      <div class="row">
+        <div class="col-sm-5 logo">
+          <img src="assets/images/logo-mc.svg" alt="Логотип Minecraft Визитка">
+        </div>
+        <div class="col-sm-7 contacts">
+          <strong>Тема проекта:</strong> Minecraft <span class="dot">|</span>
+          <strong>Страница:</strong> Мини-игра <span class="dot">|</span>
+          <strong>Тип:</strong> Кликер по руде
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mc-menu" aria-expanded="false">
+          <span class="sr-only">Открыть меню</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="mc-menu">
+        <ul class="nav navbar-nav">
+          <li><a data-page="index" href="index.html">Главная</a></li>
+          <li><a data-page="about" href="about.html">О Minecraft</a></li>
+          <li><a data-page="guides" href="guides.html">Гайды</a></li>
+          <li class="active"><a data-page="game" href="game.html">Мини-игра</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section">
+      <h1 class="section-title">Мини-игра: Кликер по руде</h1>
+      <p class="section-subtitle">Кликай по блоку руды киркой, копи ресурс и улучшай инструмент</p>
+      <hr class="mc-divider">
+
+      <div class="game-panel">
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="stats-line">Добыто руды: <span id="score">0</span></p>
+            <p class="stats-line">Уровень кирки: <span id="level">1</span></p>
+            <p class="stats-line">Сила удара: <span id="power">1</span></p>
+            <p>Стоимость улучшения: <strong><span id="upgrade-cost">20</span></strong> руды</p>
+            <button id="upgrade-btn" class="btn btn-mc">Улучшить кирку</button>
+            <button id="reset-btn" class="btn btn-mc-alt">Сбросить прогресс</button>
+          </div>
+          <div class="col-sm-4 pickaxe-side">
+            <img id="pickaxe-image" src="assets/images/pickaxe-wood.svg" alt="Кирка: деревянная">
+            <p><strong>Материал кирки:</strong> <span id="pickaxe-material">Деревянная</span></p>
+            <p><small>Каждое улучшение дает +1 к добыче за клик</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-panel ore-zone">
+        <button id="ore-btn" aria-label="Добыть руду">
+          <img src="assets/images/ore-coal.svg" alt="Блок руды">
+        </button>
+      </div>
+
+      <div class="sources-box">
+        <h3>Навигация</h3>
+        <p><a href="guides.html">Перейти к гайдам</a> · <a href="about.html">Читать про режимы Minecraft</a> · <a href="index.html">На главную</a></p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer container">
+    © Minecraft Визитка · Учебный проект · 2026
+  </footer>
+
+  <script src="assets/vendor/js/jquery-1.11.1.min.js"></script>
+  <script src="assets/vendor/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/game.js"></script>
+</body>
+</html>
