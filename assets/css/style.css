@@ -63,6 +63,7 @@ a:focus {
   border-radius: 0;
   border: 0;
   background: linear-gradient(to bottom, #3b3b3b 0%, #1f1f1f 100%);
+  overflow: hidden;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -72,13 +73,21 @@ a:focus {
   letter-spacing: 0.5px;
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus,
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav:not(.navbar-right) > li > a:hover,
+.navbar-default .navbar-nav:not(.navbar-right) > li > a:focus,
+.navbar-default .navbar-nav:not(.navbar-right) > .active > a,
+.navbar-default .navbar-nav:not(.navbar-right) > .active > a:hover,
+.navbar-default .navbar-nav:not(.navbar-right) > .active > a:focus {
   background: var(--mc-grass);
   color: #fff;
+}
+
+.navbar-default .navbar-nav.navbar-right > li > a:hover,
+.navbar-default .navbar-nav.navbar-right > li > a:focus {
+  background: var(--mc-grass);
+  color: #fff;
+  outline: none;
+  box-shadow: none;
 }
 
 .navbar-default .navbar-toggle {
@@ -313,6 +322,12 @@ a:focus {
   color: #fff;
   padding: 14px;
   border-top: 4px solid var(--mc-grass);
+}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav.navbar-right {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 767px) {
